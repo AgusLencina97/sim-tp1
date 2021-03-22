@@ -255,6 +255,7 @@
             this.btnSiguienteValor.TabIndex = 2;
             this.btnSiguienteValor.Text = "Siguiente Valor";
             this.btnSiguienteValor.UseVisualStyleBackColor = false;
+            this.btnSiguienteValor.Click += new System.EventHandler(this.btnSiguienteValor_Click);
             // 
             // btnCerrar
             // 
