@@ -25,13 +25,13 @@ namespace sim_tp1
         private void btnLineal_Click(object sender, EventArgs e)
         {
             // Limpiar la grilla
-            dgvTablaResultados.Rows.Clear();
+            dgvResultadosLineal.Rows.Clear();
 
-            double valorXo = Int32.Parse(inputSemilla.Text);
-            int valorC = Int32.Parse(inputCc.Text);
+            double valorXo = Int32.Parse(inputXoLineal.Text);
+            int valorC = Int32.Parse(inputCcLineal.Text);
 
             // Verificar que "g" sea un nro entero positivo
-            int valorG = verificarEnteroPositivo(inputG.Text, "g");
+            int valorG = verificarEnteroPositivo(inputGLineal.Text, "g");
             if(valorG == -1)
             {
                 // Es return; asi deja de ejecutar el codigo que sigue
@@ -39,7 +39,7 @@ namespace sim_tp1
             }
 
             // Verificar que "k" sea un nro entero positivo
-            int valorK = verificarEnteroPositivo(inputK.Text, "k");
+            int valorK = verificarEnteroPositivo(inputKLineal.Text, "k");
             if (valorK == -1)
             {
                 return;
@@ -47,11 +47,11 @@ namespace sim_tp1
 
             // Calcular y mostrar el valor de "a"
             int valorA = 1 + 4 * valorK;
-            inputA.Text = valorA.ToString();
+            inputALineal.Text = valorA.ToString();
 
             // Calcular y mostrar el valor de "m (módulo)"
             double valorM = Math.Pow(2, valorG);
-            inputModulo.Text = valorM.ToString();
+            inputMLineal.Text = valorM.ToString();
 
             // Controlar que "c" sea relativamente primo a "m" que el unico divisor entre ellos sea el 1 (FALTA!!!!!)
 
@@ -69,7 +69,7 @@ namespace sim_tp1
                 decimal resultado = decimal.Round(Convert.ToDecimal(calculoUltimoTermino), 4);
 
                 // Mostrar los valores en la tabla
-                dgvTablaResultados.Rows.Add(i + 1 , aXi, valorXo, resultado);
+                dgvResultadosLineal.Rows.Add(i + 1 , aXi, valorXo, resultado);
             }
         }
 
@@ -95,28 +95,25 @@ namespace sim_tp1
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            inputSemilla.Text = "";
-            inputK.Text = "";
-            inputG.Text = "";
-            inputCc.Text = "";
-            inputA.Text = "";
-            inputModulo.Text = "";
-            dgvTablaResultados.Rows.Clear();
+            inputXoLineal.Text = "";
+            inputKLineal.Text = "";
+            inputGLineal.Text = "";
+            inputCcLineal.Text = "";
+            inputALineal.Text = "";
+            inputMLineal.Text = "";
+            dgvResultadosLineal.Rows.Clear();
         }
 
         private void btnMultiplicativo_Click(object sender, EventArgs e)
         {
-            double valorXo = Int32.Parse(inputSemilla.Text);
+            double valorXo = Int32.Parse(inputXoMultiplicativo.Text);
 
             // Limpiar la grilla
-            dgvTablaResultados.Rows.Clear();
+            dgvResultadosMultiplicativo.Rows.Clear();
 
-            // Limpiar y desabilitar "c" porque no se necesita para el calculo
-            inputCc.Text = "0";
-            inputCc.Enabled = false;
-
+           
             // Vertificar que K sea entero positivo
-            int valorK = verificarEnteroPositivo(inputK.Text, "k");
+            int valorK = verificarEnteroPositivo(inputKMultiplicativo.Text, "k");
             if(valorK == -1)
             {
                 return;
@@ -124,7 +121,7 @@ namespace sim_tp1
 
             // Verificar que g sea entero
             int valorG;
-            bool successG = Int32.TryParse(inputG.Text, out valorG);
+            bool successG = Int32.TryParse(inputGMultiplicativo.Text, out valorG);
             if(!successG)
             {
                 MessageBox.Show("El número g ingresado debe ser un entero");
@@ -140,11 +137,11 @@ namespace sim_tp1
 
             // Calcular y mostrar el valor de "a"
             int valorA = 3 + (8 * valorK);
-            inputA.Text = valorA.ToString();
+            inputAMultiplicativo.Text = valorA.ToString();
 
             // Calcular y mostrar el valor de "m" (Módulo)
             double valorM = Math.Pow(2, valorG);
-            inputModulo.Text = valorM.ToString();
+            inputMMultiplicativo.Text = valorM.ToString();
 
             // Ciclo para el cálculo del método
             for( int i = 0; i < 20; i++  )
@@ -160,7 +157,7 @@ namespace sim_tp1
                 decimal resultado = decimal.Round(Convert.ToDecimal(ultimoTermino), 4);
 
                 // Mostrar los valores en la tabla
-                dgvTablaResultados.Rows.Add(i + 1, aXi, valorXo, resultado);
+                dgvResultadosMultiplicativo.Rows.Add(i + 1, aXi, valorXo, resultado);
             }
         }
 
@@ -174,5 +171,16 @@ namespace sim_tp1
                 return true;
             }
         }
+
+        private void btnLimpiarMultiplicativo_Click(object sender, EventArgs e)
+        {
+            inputXoMultiplicativo.Text = "";
+            inputKMultiplicativo.Text = "";
+            inputGMultiplicativo.Text = "";
+            inputAMultiplicativo.Text = "";
+            inputMMultiplicativo.Text = "";
+            dgvResultadosMultiplicativo.Rows.Clear();
+        }
+
     }
 }
