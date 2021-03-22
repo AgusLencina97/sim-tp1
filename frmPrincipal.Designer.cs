@@ -243,6 +243,7 @@
             this.btnMultiplicativo.TabIndex = 1;
             this.btnMultiplicativo.Text = "Método Congruencial Multiplicativo\r\n";
             this.btnMultiplicativo.UseVisualStyleBackColor = true;
+            this.btnMultiplicativo.Click += new System.EventHandler(this.btnMultiplicativo_Click);
             // 
             // btnSiguienteValor
             // 
