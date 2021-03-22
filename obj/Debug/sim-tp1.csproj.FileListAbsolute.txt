@@ -1,0 +1,9 @@
+C:\Users\Gabi\Desktop\Universidad\4to Año\Simulacion (SIM)\Practico\tp-1\sim-tp1\bin\Debug\sim-tp1.exe.config
+C:\Users\Gabi\Desktop\Universidad\4to Año\Simulacion (SIM)\Practico\tp-1\sim-tp1\bin\Debug\sim-tp1.exe
+C:\Users\Gabi\Desktop\Universidad\4to Año\Simulacion (SIM)\Practico\tp-1\sim-tp1\bin\Debug\sim-tp1.pdb
+C:\Users\Gabi\Desktop\Universidad\4to Año\Simulacion (SIM)\Practico\tp-1\sim-tp1\obj\Debug\sim-tp1.csprojAssemblyReference.cache
+C:\Users\Gabi\Desktop\Universidad\4to Año\Simulacion (SIM)\Practico\tp-1\sim-tp1\obj\Debug\sim_tp1.frmPrincipal.resources
+C:\Users\Gabi\Desktop\Universidad\4to Año\Simulacion (SIM)\Practico\tp-1\sim-tp1\obj\Debug\sim_tp1.Properties.Resources.resources
+C:\Users\Gabi\Desktop\Universidad\4to Año\Simulacion (SIM)\Practico\tp-1\sim-tp1\obj\Debug\sim-tp1.csproj.GenerateResource.cache
+C:\Users\Gabi\Desktop\Universidad\4to Año\Simulacion (SIM)\Practico\tp-1\sim-tp1\obj\Debug\sim-tp1.exe
+C:\Users\Gabi\Desktop\Universidad\4to Año\Simulacion (SIM)\Practico\tp-1\sim-tp1\obj\Debug\sim-tp1.pdb
