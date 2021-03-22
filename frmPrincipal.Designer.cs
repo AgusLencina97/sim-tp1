@@ -201,6 +201,7 @@
             this.btnMultiplicativo.TabIndex = 2;
             this.btnMultiplicativo.Text = "Método Congruencial Multiplicativo\r\n";
             this.btnMultiplicativo.UseVisualStyleBackColor = true;
+            this.btnMultiplicativo.Click += new System.EventHandler(this.btnMultiplicativo_Click);
             // 
             // btnSiguienteValor
             // 
@@ -262,7 +263,7 @@
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(342, 23);
             this.btnLimpiar.TabIndex = 6;
-            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.Text = "Limpiar Campos y Tabla";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
